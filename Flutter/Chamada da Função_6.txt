@@ -1,0 +1,29 @@
+Definindo Chamada da Função
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(PerguntaApp());
+
+class PerguntaApp extends StatelessWidget {
+  final perguntas = [
+    'Qual o maior do Nordeste?',
+    'Quem não tem mais calendário em 2024?',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: Column(
+          children: [
+            Text(perguntas[0]),
+            Text(perguntas[1]),
+          ],
+        ),
+      ),
+    );
+  }
+}

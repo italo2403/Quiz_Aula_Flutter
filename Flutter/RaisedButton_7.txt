@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+main() => runApp(PerguntaApp());
+
+class PerguntaApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final perguntas=[
+      'Qual é o Maior do Nordeste?',
+      'Qual o time que não tem calendário em 2024?',
+    ];
+    // 
+    // 
+    // plement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: Column(
+          children:<Widget> [
+         Text(perguntas.elementAt(0)),
+          //Text(perguntas[0]),
+          RaisedButton(child: Text("Resposta 1" ),
+                    onPressed: null),
+                    ],
+                  ),
+                ),
+              );
+            }
+          }
+          
+          class RaisedButton {
+}
