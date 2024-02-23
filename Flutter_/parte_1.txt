@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+main() {
+  return runApp(new PerguntaApp());
+}
+
+class PerguntaApp extends StatelessWidget {
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Text("Olá Flutter"),
+    );
+  }
+}

@@ -1,0 +1,19 @@
+
+1. Função main(): A função main() é o ponto de entrada do aplicativo Flutter. Ela chama a função runApp(), que inicializa o aplicativo com o widget `PerguntaApp`.
+
+2. Classe PerguntaApp: Esta classe é um widget StatelessWidget, o que significa que não mantém estado interno. Ela substitui o método build() para construir a interface do usuário.
+
+3. Método responder(): Este método imprime Pergunta Respondida! no console sempre que é chamado. Ele será usado como um callback para os botões de resposta.
+
+4. Método build(): Este método é substituído para construir a interface do usuário. Ele retorna um MaterialApp, que é um widget que configura o design básico do aplicativo, como a barra de título e as rotas.
+
+5. AppBar: O AppBar é um widget que exibe um cabeçalho na parte superior da tela. Ele recebe um título, definido como Perguntas neste caso.
+
+6. Corpo (Body): O corpo do Scaffold é uma Column, que organiza seus filhos em uma coluna vertical. Dentro da Column, há três widgets: dois Text widgets exibindo as perguntas e dois ElevatedButton widgets que representam as respostas.
+
+7. ElevatedButton: O ElevatedButton é um widget que cria um botão com um estilo de destaque. Ele tem um texto que exibe a resposta e um callback onPressed que é acionado quando o botão é pressionado.
+
+8. Chamada do Método responder(): Os botões de resposta têm o método responder() como callback para o evento onPressed. Isso significa que quando um botão é pressionado, o método responder() será chamado e "Pergunta Respondida!" será impresso no console.
+
+
+

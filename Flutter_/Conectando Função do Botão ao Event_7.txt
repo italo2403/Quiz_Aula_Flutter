@@ -1,0 +1,42 @@
+Conectando Função do Botão ao Evento
+
+Erro com o Método Responder 
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(PerguntaApp());
+
+class PerguntaApp extends StatelessWidget {
+
+  void responder(){
+    print('Pergunta Resposndida!')
+  }
+  @override
+  Widget build(BuildContext context) {
+    final perguntas = [
+      'Qual é o Maior do Nordeste?',
+      'Qual o time que não tem calendário em 2024?',
+    ];
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: Column(
+          children: <Widget>[
+            Text(perguntas.elementAt(0)),
+            ElevatedButton(
+              child: Text("Resposta 1"),
+              onPressed: responder(),
+            ),
+            ElevatedButton(
+              child: Text("Resposta 2"),
+              onPressed: responder(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

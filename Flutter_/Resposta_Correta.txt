@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(PerguntaApp());
+
+class PerguntaApp extends StatefulWidget {
+  @override
+  _PerguntaAppState createState() => _PerguntaAppState();
+}
+
+class _PerguntaAppState extends State<PerguntaApp> {
+  int? respostaSelecionada;
+
+  void selecionarResposta(int resposta) {
+    setState(() {
+      respostaSelecionada = resposta;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final perguntas = [
+      'Qual é o Maior do Nordeste?',
+      'Qual o time que não tem calendário em 2024?',
+    ];
+
+    final respostas = [
+      'Sport Recife',
+      'Cruzeiro',
+    ];
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: Column(
+          children: <Widget>[
+            Text(perguntas.elementAt(0)),
+            ElevatedButton(
+              child: Text("Resposta 1"),
+              onPressed: () {
+                selecionarResposta(0);
+              },
+            ),
+            ElevatedButton(
+              child: Text("Resposta 2"),
+              onPressed: () {
+                selecionarResposta(1);
+              },
+            ),
+            respostaSelecionada != null
+                ? Text('Resposta: ${respostas[respostaSelecionada!]}')
+                : SizedBox(),
+          ],
+        ),
+      ),
+    );
+  }
+}
